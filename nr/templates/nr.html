@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block universal %}
+
+{% for to in nr1 %}
+
+    <div id="blNrZag"><h3>{{ to.nr_title|safe }}</h3></div>
+   <div id="blNrText">
+
+        {{ to.nr_text|safe }}
+    </div>
+    <!--{ to.nr_date }} -->
+{% endfor %}
+{% endblock %}
+
+

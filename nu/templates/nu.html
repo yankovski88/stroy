@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block universal %}
+
+
+
+
+
+{% for to in nu1 %}
+
+    <h3>{{ to.nu_title|safe }}</h3>
+    <div class="vyrovnyat">{{ to.nu_text|safe }}</div>
+    {{ to.nu_date }}<br>
+{% endfor %}
+
+{% endblock %}
+
+

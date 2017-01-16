@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block universal %}
+<h1><a href="/otzivi/dobavit/">Добавить отзыв</a></h1>
+
+{% for to in otzivi_base2 %}
+
+    <h3>{{ to.title|safe }}</h3>
+    <div id="Otzivi">
+    {{ to.text_ckred|safe }}<br>
+</div>
+{% endfor %}
+
+{% csrf_token %} {# это защита чтобы данные не могли подменить #}
+{{ form.as_p }}{# и отображаем нашу форму #}
+
+{# as_p это форма будет ввиде строк для удобстава как тег p #}
+
+
+
+
+{% endblock %}

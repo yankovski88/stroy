@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block universal %}
+{% for to in us1 %}
+
+    <div id="Us"><h1 align="center">{{ to.us_title|safe }}</h1>
+    {{ to.us_text|safe }}
+  <!--  {{ to.us_date }} -->
+    </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{# после ввода в base.html настройки static, теперь во всех шаблонах нужно вводить load staticfiles #}
+
+{% block universal %}
+<div id="blockIndexFoto">
+
+    <p align="center"><img src="https://srv69-h-st.jino.ru/download?cid=43581356f9054735864f9c6ef9ef60b3&path=%2Fdomains%2Fremstolin.promma.by%2Fstatic%2Fmedia%2Fuploads%2Fadmin%2F2016%2F12%2F19%2Ffo.jpg" alt=""></p>
+
+
+
+
+  {#    <div id="blockIndexKartinka"></div> #}
+    <div id="blockIndexReklama">
+<h2 style="text-align: center;">Затеяли ремонт, звоните! Подскажем, расскажем, посмотрите <a href="/nr/">наши работы</a>.</h2>
+<h2 style="text-align: center;">До Нового Года, действуют <font color="#FF0000">символические цены </font>на <a href="/nu/">наши услуги</a> по ремонту дома. <b><font color="#008080">Успей договориться с мастерами своего дела. Звоните 80298988178.</font></b><a href="https://vk.com/club135704232">группа VK</a></h2>
+</div> {#   конец blockIndexReklama #}
+    {% for to in index3 %}
+    <h1>{{ to.title_index|safe }}</h1><br>
+        {{ to.text_index|safe }}<br>
+
+
+{% endfor %} -->
+</div>
+{% endblock %}
+
+

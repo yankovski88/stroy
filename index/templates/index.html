@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{# после ввода в base.html настройки static, теперь во всех шаблонах нужно вводить load staticfiles #}
+
+{% block universal %}
+<!--
+<div class="column">
+  <figure class="fixedratio"></figure>
+</div>
+-->
+
+
+    <!-- <img src="http://goodhome.by/wp-content/uploads/2015/01/remont.jpg" alt="альтернативный текст">-->
+    <div class="image">
+   <img src="http://xmast.ru/wp-content/uploads/2015/12/otdelochnyie-rabotyi.jpg" alt="альтернативный текст">
+
+
+<div class="container-fluid"> <!--добавил ризиновый контейнер помогает, но может и без него тоже работает-->
+    <div id="indexImage3"><h4>- ремонт и отделка квартир, помещений;</br> - сантехнические работы, услуги сантехника;</br> - электромонтажные работы, услуги электрика;<br /> - монтаж дверей и окон ПВХ;.</h4></div>
+    <div id="indexImage2"><h4><b> - Сделаем ремонт любой сложности!</b></h4></div></br>
+        <div id="indexImage"><h4> - умеренные цены;</br> - все специалисты со стажем cвыше 10 лет.</h4></div></br>
+</div>
+    </div> <!-- закрытие класса container-fluid-->
+
+
+
+<!--
+<section id="bg-img">
+    <div class="conteiner">
+    <h2>Большое фоновое изображение</h2>
+    </div>
+    </section>
+-->
+
+
+  {#    <div id="blockIndexKartinka"></div> #}
+
+    {% for to in index3 %}
+    <h1>{{ to.title_index|safe }}</h1><br>
+        {{ to.text_index|safe }}<br>
+
+
+{% endfor %}
+
+{% endblock %}
+
+

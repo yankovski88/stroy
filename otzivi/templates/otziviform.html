@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block universal %}
+<form action="/otzivi/dobavit/" method="post"> {# наша страница и дублирование Post #}
+
+{% csrf_token %} {# это защита чтобы данные не могли подменить #}
+{{ form.as_p }}{# и отображаем нашу форму #}
+
+{# as_p это форма будет ввиде строк для удобстава как тег p #}
+
+
+<input type="submit" value="Отправить"> {# делаем нашу кнопку Отправить #}
+</form>
+<h2><b><a href="/otzivi/">Назад</a></b></h2>
+
+
+{% endblock %}

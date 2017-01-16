@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block universal %}
+    {{ post.author }}
+    <div class="post">
+<a href="{% url 'formsa:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a><br>
+    {% if post.post_publiched_date %} {# если пост побликууется, то приравниваем #}
+        <div class="date">
+{{ post.post_publiched_date }} {# и тогда вывести таблицу #}
+        </div>
+{% endif %}
+    {{ post.post_title }}
+    {{ post.post_text|linebreaks }} {# вывести текст, |linebreaks фильтр переносит текст #}
+    </div>
+{% endblock %}

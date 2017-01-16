@@ -1,0 +1,110 @@
+/* my */
+/*      делает меню навбар по центру без вкладки главная
+.navbar-nav {
+float: none;
+text-align: center;
+}
+.navbar-nav li {
+float: none;
+display: inline-block;
+}
+*/
+.navbar-default {
+    background-color: rgb(184, 184, 184);
+    border-color: #000000;
+}
+/* цвет текста, содержащий название сайта или бренда */
+.navbar-default .navbar-brand {
+    color: #000000;
+}
+
+/* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5722ff;
+}
+
+/* Цвет пунктов навигационного меню */
+.navbar-default .navbar-nav > li > a {
+    color: #000000;
+}
+
+
+/* Цвет пункта меню, при поднесении к нему курсора мышки или при его нахождении в фокусе */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #5722ff;
+}
+body {
+    background-color: #a8b4ff;
+    background-image: url('http://tplmax.ru/wp-content/uploads/vector-floral-backgrounds.png');
+}
+
+#blockIndexReklama {
+    background-color: rgb(198, 194, 81);
+    border: 5px solid #c03a5b;
+
+}
+
+
+
+#blNrText {
+    background-color: rgb(198, 194, 81);
+}
+
+#blNrZag {
+    background-color: rgba(198, 78, 31, 0.94);
+}
+
+
+#vyrovnyat {
+  background: #fff5d7;
+  padding: 3em 0;
+  text-align: center; /* выровнять текст и картинки по горизонтали */
+}
+
+#blPrise {
+  text-align: center; /* выровнять текст и картинки по горизонтали Прайс */
+}
+
+
+
+
+
+
+div.column {
+  /* The background image must be 800px wide */
+  max-width: 100%;
+}
+
+figure.fixedratio {
+  padding-top: 56.25%;  /* 450px/800px = 0.5625 */
+
+  background-image: url(http://oknohelp.ru/wp-content/uploads/2016/10/%D1%84%D0%BE%D0%BD-%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BE%D0%BA%D0%BE%D0%BD-2.png);
+  background-size: cover;
+  -moz-background-size: cover;  /* Firefox 3.6 */
+  background-position: center;  /* Internet Explorer 7/8 */
+}
+/*
+#bg-img {
+
+}
+
+@media screen and (max-width: 1016px) {
+    #bg-img {}
+    }
+
+
+@media screen and (max-width: 768px) {
+   #bg-img {}
+    }
+
+
+@media screen and (max-width: 480px) {
+   #bg-img {}
+    }
+*/
+
+
+
+

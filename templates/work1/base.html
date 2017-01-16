@@ -1,0 +1,41 @@
+<!DOCTYPE html> {# <!DOCTYPE html> это ознаечает что это html5 #}
+{% load staticfiles %} {# нужно и здесь эту строчку добовлять иначе не работает #}
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Практикум школы Бовсуновского</title>
+
+    <!-- Bootstrap -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- для мобил уменьшать экран -->
+    <link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet">
+      <link href='{% static "fonts/glyphicons-halflings-regular.eot" %}' rel="stylesheet">{# если не иконки сразу, создаем путь #}
+      {# поменяли скопированый пример с бутсрапа, добавили ковыки и { }%%  и подключили bootstrap1.min.css" #}
+
+  </head>
+
+  <!--  -->
+  <body>
+    <h1>Практикум школы Бовсуновского, автор Янковский Юрий</h1>
+    <nav class="navbar navbar-inverse" role="navigation"><!-- Начало  class="navbar navbar-inverse" role="navigation">-->
+        <div class="container"><!-- начало container-fluid резинового блока 12 вкртекалей class="container" -->
+  ...
+</div><!-- конец class="container" -->
+
+
+
+
+        <!-- Это черная полоска-->
+        {#  вот эту настройку взяли из http://bootstrap-3.ru/components.php#navbar из навигационной панели#}
+</nav><!-- Конец  class="navbar navbar-inverse" role="navigation">-->
+    {% block index %} {% endblock %}
+    {% block universal %} {% endblock %}  {# вот добавили блок чтобы потом все время не добовлять #}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+  {#  также добавили кавычки и скобочки и %#}
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block universal %}
+
+{% for to in blog1 %}
+
+    <div id="blNrZag"><h3>{{ to.blog_title|safe }}</h3></div>
+    <div id="blNrText">{{ to.blog_text|safe }}
+    {{ to.blog_date }}<br></div>
+{% endfor %}
+{% endblock %}
+
+

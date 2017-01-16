@@ -1,0 +1,151 @@
+<!DOCTYPE html> {# <!DOCTYPE html> это ознаечает что это html5 #}
+{% load staticfiles %} {# нужно и здесь эту строчку добовлять иначе не работает #}
+<html lang="ru">
+  <head> {# начало head #}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Строй Столин</title>
+      <link rel="icon" type="image/ico" href="{% static "favicon.ico" %}"><!-- Ввели в настройку для favicona ВСТАЛ КАРТИНКА-->
+
+
+ <!-- <h2 style="text-align: right;"><b>&nbsp; По всем работам и созданию сайта звоните 8-029-898-81-78 МТС</b></h2> -->
+      <!--
+<div id="blockIndexShapka"><b><p align="center"><font color="#FFFF00"><font size="6"><font style="background-color:#00006e;">По всем видам строительных работ звоните 8-029-898-81-78</font></font></font></p></b></div> <!--создал шабпку сайта-->
+
+<div class="connect2">
+        <p align="center"><font color="#000000"><font style="background-color:rgba(165, 154, 135, 0.71);"><b>Ремонт квартир в Столине <p align="right">8-029-898-81-78 МТС</p></b></font></font></p>
+</div> {#   конец class="connect2" #}
+
+
+
+
+    <!-- Bootstrap -->
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- для мобил уменьшать экран -->
+    <link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet">
+      <link href='{% static "css/mystyle.css" %}' rel="stylesheet">{# вставили наш файл mystyle.css #}
+      <link href="{% static  "fonts/glyphicons-halflings-regular.eot" %}" rel="stylesheet">
+<link href="{% static  "fonts/glyphicons-halflings-regular.svg" %}" rel="stylesheet">
+<link href="{% static  "fonts/glyphicons-halflings-regular.ttf" %}" rel="stylesheet">
+<link href="{% static  "fonts/glyphicons-halflings-regular.woff" %}" rel="stylesheet">
+      {# пути наших конок, на всякий случай #}
+      {# поменяли скопированый пример с бутсрапа, добавили ковыки и { }%%  и подключили bootstrap1.min.css" #}
+
+      <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+     <!-- <a class="navbar-brand" href="/">Главная</a> {# ввел ссылку на главную #} -->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <li><a href="/"><b>Главная</b></a></li> {# ввел ссылку на главную #}
+          <li><a href="/nu/"><b>Наши услуги</b></a></li> {# ввел ссылку на главную #}
+<!--
+               <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Наши услуги</b><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+
+            <li><a href="/nu/">Отделка квартир</a></li>
+            <li><a href="#">Электромонтаж</a></li>
+            <li><a href="#">Сантехнические работы</a></li>
+              <li><a href="#">Монтаж окон и дверей</a></li>
+             <!-- <li><a href="#">Кровельные работы</a></li>
+              <li><a href="#">Строительство домов</a></li>
+          </ul>
+        </li>
+        -->
+
+              <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Наши работы</b><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/nr/">Отделка квартир</a></li>
+            <li><a href="/nrelectro/">Электромонтаж</a></li>
+            <li><a href="/nrsanteh/">Сантехнические работы</a></li>
+              <li><a href="/nrokdv/">Монтаж окон и дверей</a></li>
+            <!--  <li><a href="#">Кровельные работы</a></li>
+              <li><a href="#">Строительство домов</a></li> -->
+          </ul>
+        </li>
+
+               <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Процесс работ</b><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/blog/">Отделка квартир</a></li>
+            <li><a href="#">Электромонтаж</a></li>
+            <li><a href="#">Сантехнические работы</a></li>
+              <li><a href="#">Монтаж окон и дверей</a></li>
+              <!-- <li><a href="#">Кровельные работы</a></li>
+              <li><a href="#">Строительство домов</a></li> -->
+          </ul>
+        </li>
+
+
+          <li><a href="/otzivi/"><b>Отзывы</b></a></li>
+          <li><a href="/us/"><b>О Нас</b></a></li>
+          <!--<li><a href="/blog">Статьи (Блог)</a></li>-->
+
+
+      </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+  </head> {# Конец head #}
+
+
+ <body>
+
+
+
+{% block universal %} {% endblock %}  {# вот добавили блок чтобы потом все время не добовлять #}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+  {#  также добавили кавычки и скобочки и %#}
+
+<!--<div class="container-fluid"> добавил ризиновый контейнер помогает, но может и без него тоже работает-->
+<div class="connect">
+  <!-- <div id="blockIndexReklama"> -->
+    <!--
+        фото
+        Наша команда по ремонту квартир выплнит все работы связанные с отделкой, электрикой, сантехникой, монтажем дверей и окон.
+        Познакомитесь с лучшими специалистами своего города.
+        Все специалисты со стажем выше 7 лет, постоянно работаю в своей сфере, выполняют работы любой сложности по своему профилю. -->
+        <p>Для получения более подробной информации, звоните по номеру 8-029-898-81-78</p>
+        <!--
+<h2 style="text-align: center;"> 1<a href="/nr/">аши работы</a>.</h2>
+<h2 style="text-align: center;">Действуют <font color="#FF0000">специальные цены </font>на <a href="/nu/">наши услуги</a> на все виды работ. <p><b><font color="#008080">Успей договориться с мастерами своего дела. Звоните 80298988178.</font></b></h2></p>
+-->
+</div> {#   конец blockIndexReklama #}
+   <!-- </div> конец резинового контейнера-->
+
+  </body>
+
+</html>

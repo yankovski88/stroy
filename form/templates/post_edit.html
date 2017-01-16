@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block universal %}
+
+    <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Сохранить запись" />
+</form>
+
+{% endblock %}

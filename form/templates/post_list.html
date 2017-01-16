@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{% block universal %}
+    <a href="{% url 'formsa:post_new' %}"><span class="glyphicon glyphicon-plus"></span></a><br>
+{% for to in to %}
+    {{ to.author }}
+    <h1><a href="{% url 'formsa:post_detali' to.pk %}">{{ to.post_title }}</a></h1>
+    {{ to.post_text }}<br>
+    {{ to.post_created_date }}<br>
+    {% endfor %}
+
+{% endblock %}
